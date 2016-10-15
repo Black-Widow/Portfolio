@@ -1,0 +1,88 @@
+.contact {
+  min-height: 510px;
+  padding-top: 20px;
+  background-color: $skills;
+  border-top: 5px solid $darkBluePlus;
+}
+
+.form_contact {
+  display: flex;
+
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.flexRow {
+   position: relative;
+  display: flex;
+  margin-bottom: 1em;
+   span {
+      position: absolute;
+      top: 55px;
+      left: 60px;
+   }
+}
+
+.fc_label {
+  display: flex;
+  width: 3em;
+  background-color: $darkBlue;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.fc_input {
+  width: 300px;
+  padding: 1em;
+  font-size: 1em;
+  color: #8f8f8f;
+  border: 0;
+
+  flex: 1;
+  transition: transform .15s ease;
+    &:focus {
+        outline: none;
+        transform: scale(1.04);
+        transition: transform .15s ease;
+    }
+}
+
+.fc_message {
+  width: 90%;
+   margin-top: 40px;
+  textarea {
+    width: 100%;
+    padding: 1em;
+    color: #8f8f8f;
+  }
+}
+.fc_submit {
+  width: 200px;
+  padding: 5px;
+  font-size: 1.2em;
+  line-height: 55px;
+  text-transform: uppercase;
+  background-color: $darkBlue;
+  border: none;
+  transition-duration: $duration;
+  &:hover {
+    background-color: $darkBluePlus;
+    transition-duration: $duration;
+  }
+}
+
+.errors, .success {
+   background-color: rgb(29, 48, 57);
+   width: 50%;
+   margin: 0 auto 20px auto;
+   padding: 10px;
+}
+
+.errors {
+   color: $red;
+}
+
+.success {
+   color: #48bd34;
+}

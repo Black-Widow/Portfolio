@@ -1,0 +1,29 @@
+.works_cat_button {
+  margin-left: 5px;
+  background-color: $darkBluePlus;
+  border-radius: 5px;
+  transition-duration: $duration;
+  &:hover {
+    background-color: $red;
+    transition-duration: $duration;
+  }
+}
+.works_cat_button.is-cheked {
+  background-color: $red;
+}
+
+.works {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .works_cat_button {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .works_cat_button {
+    padding: 5px;
+  }
+}

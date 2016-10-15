@@ -1,0 +1,13 @@
+.skills {
+  padding-top: 20px;
+  margin-top: 45px;
+  text-align: center;
+  background-color: $skills;
+  border-top: 5px solid $darkBluePlus;
+}
+
+.skills__item {
+  display: inline-block;
+  width: 150px;
+  margin: 0 0 30px 20px;
+}

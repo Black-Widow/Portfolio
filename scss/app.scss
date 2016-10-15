@@ -1,0 +1,52 @@
+//IMPORT
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,700';
+@import "reset";
+@import "variables";
+@import "layouts/header";
+@import "layouts/portfofio";
+@import "layouts/skills";
+@import "layouts/services";
+@import "layouts/contact";
+@import "layouts/footer";
+@import "modules/menu";
+@import "modules/card";
+@import "modules/workShow";
+@import "modules/shareButton";
+
+
+//BASE
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+body {
+  color: #fff;
+  background: $darkBlue;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.content {
+  padding-top: 150px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

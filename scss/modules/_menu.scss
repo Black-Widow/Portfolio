@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__menu {
+    display: block;
+    float: right;
+    height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    a {
+      float: left;
+      height: 100%;
+      margin-left: 20px;
+      font-size: 1em;
+      font-weight: 600;
+      line-height: 80px;
+      text-transform: uppercase;
+      transition-duration: $duration;
+      &:hover {
+        color: $red;
+        transition-duration: $duration;
+      }
+    }
+  }
+}

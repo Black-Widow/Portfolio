@@ -1,0 +1,12 @@
+{
+    "name": "benji/portfolio",
+    "authors": [
+        {
+            "name": "benjamin",
+            "email": "benjamindanielis@gmail.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4"
+    }
+}

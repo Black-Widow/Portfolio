@@ -1,0 +1,77 @@
+
+
+@media (min-width: 768px) {
+  .share {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .share {
+    position: absolute;
+    top: -2px;
+    left: 51%;
+    display: block;
+    max-width: 400px;
+    height: 100px;
+    margin: 0 auto;
+
+    @include clearfix;
+  }
+
+  .share-button,
+  .share-toggle-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin-top: -40px;
+    margin-left: -40px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    background: #ccc;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+  }
+
+  .share-button:hover,
+  .share-toggle-button:hover {
+    color: #fff;
+  }
+
+  .share-button {
+    font-size: 30px;
+    color: #222;
+    background: $skills;
+    -webkit-transform: scale(.95, .95);
+            transform: scale(.95, .95);
+  }
+
+  a.share-button {
+    color: $darkBluePlus;
+  }
+
+  a.share-button:hover,
+  a.share-button:focus {
+    color: #dfd7d7;
+  }
+
+  .share-toggle-button {
+    z-index: 9;
+    font-size: 20px;
+    background: $skills;
+  }
+
+  .share-items {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .share-item {
+    display: inline-block;
+  }
+}
