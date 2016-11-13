@@ -386,14 +386,16 @@ header.header {
       -ms-flex: 1;
           flex: 1;
   transition: -webkit-transform .15s ease;
-  transition: transform .15s ease; }
+  transition: transform .15s ease;
+  transition: transform .15s ease, -webkit-transform .15s ease; }
   .fc_input:focus {
     outline: none;
     -webkit-transform: scale(1.04);
         -ms-transform: scale(1.04);
             transform: scale(1.04);
     transition: -webkit-transform .15s ease;
-    transition: transform .15s ease; }
+    transition: transform .15s ease;
+    transition: transform .15s ease, -webkit-transform .15s ease; }
 
 .fc_message {
   width: 90%;
