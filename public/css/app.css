@@ -517,6 +517,7 @@ header.header {
       transition-duration: 0.3s; } }
 
 .show_work {
+  display: none;
   position: relative;
   margin-top: 10px; }
   .show_work:after {
