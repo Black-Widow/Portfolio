@@ -7,7 +7,6 @@
 	<meta charset="utf-8">
 	<title>Webdesigner - Développeur Front-End</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link href="css/royal_preloader.min.css" rel="stylesheet">
 	<script src="https://use.fontawesome.com/1c4825b396.js"></script>
 </head>
 <body>
@@ -35,14 +34,14 @@
 			</ul>
 		</div>
 		<nav class="header__menu">
-			<a class="menu__item" href="#">Portfolio</a>
-			<a class="menu__item" href="#">Compétences</a>
-			<a class="menu__item" href="#">Services</a>
+			<a class="menu__item" href="#portfolio">Portfolio</a>
+			<a class="menu__item" href="#skills">Compétences</a>
+			<a class="menu__item" href="#service">Services</a>
 			<a class="menu__item" href="#contact">Contact</a>
 		</nav>
 	</header>
 	<section class="content">
-		<article class="works">
+		<article class="works" id="portfolio">
 			<div class="container">
 				<h2>Portfolio</h2>
 				<div class="works_cat" id="filter">
@@ -50,13 +49,28 @@
 					<button data-filter=".web" class="works_cat_button">Web-design</button>
 					<button data-filter=".print" class="works_cat_button">Print</button>
 				</div>
-            <div class="show_work">
-               <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-               <img src="img/work_mr.jpg" class="screen" alt="">
-               <button class="viewDemo">Aperçu</button>
-            </div>
+					<div class="show_work" id="showMr">
+						<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+						<img src="img/work_mr.jpg" class="screen" alt="">
+						<button class="viewDemo">Aperçu</button>
+					</div>
+				<div class="show_work" id="showSpoune">
+					<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+					<img src="img/work_spoune.jpg" class="screen" alt="">
+					<button class="viewDemo">Aperçu</button>
+				</div>
+				<div class="show_work" id="showBo">
+					<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+					<img src="img/work_bo.jpg" class="screen" alt="">
+					<button class="viewDemo">Aperçu</button>
+				</div>
+				<div class="show_work" id="showPort">
+					<i class="fa fa-times-circle-o" aria-hidden="true"></i>
+					<img src="img/work_portfolio.jpg" class="screen" alt="">
+					<button class="viewDemo">Aperçu</button>
+				</div>
 				<ul class="cards">
-					<li class="card">
+					<li class="card" id="mr">
 						<a href="">
 							<img src="img/work_mr.jpg">
 							<div class="card_details">
@@ -64,7 +78,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="card">
+					<li class="card" id="spoune">
 						<a href="">
 							<img src="img/work_spoune.jpg">
 							<div class="card_details">
@@ -72,7 +86,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="card">
+					<li class="card" id="bo">
 						<a href="">
 							<img src="img/work_bo.jpg">
 							<div class="card_details">
@@ -80,7 +94,7 @@
 							</div>
 						</a>
 					</li>
-					<li class="card">
+					<li class="card" id="pf">
 						<a href="">
 							<img src="img/work_portfolio.jpg">
 							<div class="card_details">
@@ -91,7 +105,7 @@
 				</ul>
 			</div>
 		</article>
-		<article class="skills">
+		<article class="skills" id="skills">
 			<div class="container">
 				<h2>Mes Compétences</h2>
 				<div class='skills__item'>
@@ -114,7 +128,7 @@
 				</div>
 			</div>
 		</article>
-		<article class="services">
+		<article class="services" id="service">
 			<div class="container">
 				<h2>Services</h2>
 				<p><span>Web-Designer freelance </span>, je m'occupe de la réalisation de votre design. Une idée de projet vous trotte dans la tête ?
@@ -162,14 +176,60 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/TweenMax.min.js"></script>
 <script src="js/share.js"></script>
-<!--<script type="text/javascript" src="js/royal_preloader.min.js"></script>-->
-<!--<script type="text/javascript">
-	Royal_Preloader.config({
-		mode:       'number',
-		text:       'MelonHTML5 - Royal Preloader...',
-		background: '#1e222b'
+<script>
+	$(document).ready(function() {
+		$('.menu__item').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 750; // Durée de l'animation (en ms)
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			return false;
+		});
 	});
-</script>-->
+</script>
+<script>
+	// On attend que la page soit chargée
+	jQuery(document).ready(function()
+	{
+		// toggle() lorsque le lien avec l'ID #toggler est cliqué
+		jQuery('#mr').click(function()
+		{
+			// On cache la zone de texte
+			jQuery('.show_work').slideUp();
+
+			jQuery('#showMr').slideDown();
+			return false;
+		});
+		jQuery('#spoune').click(function()
+		{
+			// On cache la zone de texte
+			jQuery('.show_work').slideUp();
+
+			jQuery('#showSpoune').slideDown();
+			return false;
+		});
+		jQuery('#bo').click(function()
+		{
+			// On cache la zone de texte
+			jQuery('.show_work').slideUp();
+
+			jQuery('#showBo').slideDown();
+			return false;
+		});
+		jQuery('#pf').click(function()
+		{
+			// On cache la zone de texte
+			jQuery('.show_work').slideUp();
+
+			jQuery('#showPort').slideDown();
+			return false;
+		});
+		jQuery('.fa').click(function()
+		{
+			jQuery('.show_work').slideUp();
+			return false;
+		});
+	});
+</script>
 </body>
 </html>
 <?php
